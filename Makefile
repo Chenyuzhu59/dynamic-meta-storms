@@ -1,6 +1,6 @@
-CC=$(CXX)
-if [ `uname` == Darwin ]; then
-	CC=$(CLANGXX)
+CC:=$(CXX)
+ifneq (,$(findstring Darwin,$(shell uname)))
+	CC:=$(CLANGXX)
 endif 
 
 OMPFLG=-fopenmp
