@@ -27,7 +27,7 @@ else
         fi
 
 fi
-DM_PATH=${PREFIX}
+DM_PATH=`pwd`
 Sys_ver=`uname`
 ###Checking that environment variable of Dynamic-MetaStorms exists###
 Check_old_pm=`grep "export DynamicMetaStorms"  $PATH_File|awk -F '=' '{print $1}'`
